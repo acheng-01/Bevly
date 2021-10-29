@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #70CEE9;
+    font-family: 'Archivo', sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.banner button {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #CEE970;
+    border: none;
+    background-color:#70CEE9;
+    display: inline;
+    position: relative;
+}
+
+.banner button:after {
+    content: 'Bevly';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    color: #e970cf;
+}
+
+.banner button:hover {
+    cursor: pointer;
+}
+
+.banner h2 {
+    color: white;
+    text-shadow: 2px 2px 1px #0000006c;
+}
+
+form {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+form input {
+    height: 30px;
+    width: 200px;
+    margin-right: 5px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+input[type='text']::placeholder {
+    padding-left: 10px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+form .search-button {
+    background-color: #70CEE9;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+/* would like search "glass" to rotate upon hover*/
+
+.search-button i {
+    vertical-align: middle;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
+
+.randomize {
+    margin-left: 50%;
+    transform:translateX(-50%);
+    border: none;
+    background-color: #70CEE9;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.281);
+}
+
+.randomize:hover {
+    cursor: pointer;
+    font-size: 17px;
+    text-shadow: 1px 1px 2px #e970cf;
+}
+
+ul {
+    list-style: none;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.results li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 7px;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    width: 225px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.543);
+    box-shadow: 1px -1px 1px #e970cf;
+}
+
+.results img {
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    width: 50px;
+    border: 1px solid rgba(130, 130, 130, 0.434);
+    border-radius: 15px 0 0 15px;
+}
+
+.result:hover {
+    box-shadow: 2px -2px 2px #e970cf;
+    cursor: pointer;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 350px;
+}
+
+.drink-name {
+    font-family: 'Sora', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info {
+    background-color: rgba(255, 255, 255, 0.488);
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid rgba(172, 172, 172, 0.612);
+}
+
+.cocktail-photo img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.ingredients {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.ingredients li {
+    width: 50%;
+}
+
+.more-info {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.488);
+    border-radius: 0 0 15px 15px;
+}
+
+.instructions {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.title {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
