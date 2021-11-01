@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Sora:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Sora:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 </head>
@@ -22,9 +22,9 @@
     <div class='search-bar'>
         <form>
             <input type="text" id='drink-search' placeholder='Search for a cocktail' required>
-            <button type='submit' class='search-button'><i class="fas fa-glass-whiskey"></i></button>
+            <button type='submit' class='search-button'><span>Search <i class="fas fa-glass-whiskey"></i></span></button>
         </form>
-        <button class='randomize' onclick='getRandomCocktail()'>Pick for me!</button>
+        <button class='randomize' onclick='getRandomCocktail()'><span>I'm not sure what I want...</span></button>
     </div>
 
     <ul class='results hidden'></ul>
@@ -48,9 +48,6 @@
         <p>Sorry! The drink you're looking for isn't in the database. Please try another.</p>
     </div>
 
-    <button class='back-button hidden'>Previous</button>
-    <button class='next-button hidden' onclick='handleMoreCocktails(search)'>Next</button>
-    
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
     <script src='app-code.js'></script>
 </body>
