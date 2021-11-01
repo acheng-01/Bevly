@@ -29,14 +29,11 @@ function clearDetails() {
 /* Display functions */
 
 function displayDrinkInfo(responseJson) {
-    console.log(responseJson);
     clearDetails();
     if (!$('.error-msg').hasClass('hidden')) {
         $('.error-msg').addClass('hidden');
     }
     handleIngredients(responseJson);
-    console.log(ingredientImageArray);
-    console.log(ingredientArray);
     $('.results').addClass('hidden');
     $('.drink-name').append(`${responseJson.drinks[0].strDrink}`);
     $('.cocktail-photo').append(`<img src='${responseJson.drinks[0].strDrinkThumb}'>`);
@@ -55,15 +52,7 @@ function displayDrinkInfo(responseJson) {
     $('.details').removeClass('hidden');
 }
 
-/*  The following variables are made global so that further pages may be accessed.
-    No other for loops can use these variables */
-//let i = 0
-let maxResults = 10;
-
 function displayResults(responseJson) {
-    console.log(responseJson);
-
-    
     $('.details').addClass('hidden');
     $('.results').empty();
     if (!$('.error-msg').hasClass('hidden')) {
@@ -85,19 +74,12 @@ function displayResults(responseJson) {
     };
 
     $('.results').removeClass('hidden');
-
-    
-    /*if (responseJson.drinks.length > 10) {
-        if ($('.next-button').hasClass('hidden')) {
-            $('.next-button').removeClass('hidden');
-        };*/
 }
 
 /* All the functions for calling the API */
 
 function getCocktails(search) {
     const url = searchURL + search;
-    console.log(url)
 
     fetch(url)
         .then (response => {
@@ -114,7 +96,6 @@ function getCocktails(search) {
 
 function getCocktailById(id) {
     const url = searchURL2 + id;
-    console.log(url)
 
     fetch(url)
         .then (response => {
@@ -150,9 +131,8 @@ function handleIngredients(responseJson) {
     ingredientImageArray.splice(0,ingredientImageArray.length);
 
     for (let k = 1; k < 16; k++) {
-        let lastPart = 'strIngredient' + k;
-        let lastPart2 = 'strMeasure' + k;
-        console.log(lastPart);
+        const lastPart = 'strIngredient' + k;
+        const lastPart2 = 'strMeasure' + k;
         if (responseJson.drinks[0][lastPart] != null) {
             //generate image URLs
             ingredientImageArray.push(ingredientURLFront + responseJson.drinks[0][lastPart] + ingredientURLEnd);
