@@ -173,7 +173,7 @@ ul {
 }
 
 .info {
-    background-color: rgba(255, 255, 255, 0.488);
+    background-color: rgba(255, 255, 255, 0.516);
     border-radius: 15px 15px 0 0;
     border-bottom: 1px solid rgba(172, 172, 172, 0.612);
 }
@@ -198,13 +198,13 @@ ul {
 
 .more-info {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.488);
+    background-color: rgba(255, 255, 255, 0.516);
     border-radius: 0 0 15px 15px;
 }
 
 .instructions {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .title {
@@ -236,8 +236,12 @@ ul {
 }
 
 @media screen and (min-width: 1000px) {
+    .banner {
+        padding-top: 10px;
+    }
+
     .home-logo {
-        margin-right: 400px;
+        margin-right: 350px;
     }
 
     form input {
@@ -249,14 +253,14 @@ ul {
     }
 
     .details {
-        width: 750px;
+        width: 760px;
     }
 
     .info {
         display: flex;
         flex-direction: row;
-        width: 750px;
-        background-color: none;
+        width: 760px;
+        background-color: rgba(255, 255, 255, 0);
         border-bottom: none;
     }
 
@@ -266,6 +270,32 @@ ul {
     }
 
     .ingredients-container {
+        width: 375px;
         border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.516);
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .more-info {
+        border-radius: 15px;
+    }
+
+    .instructions {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+    }
+
+    .results {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 760px;
+        transform: translateX(-5px);
+    }
+
+    .results li {
+        margin-left: 10px;
     }
 }
