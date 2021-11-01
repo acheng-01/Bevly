@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #70CEE9;
+    background-color: #FFB62F;
     font-family: 'Archivo', sans-serif;
     height: 100vh;
     margin: 0;
@@ -24,9 +24,9 @@ body {
     font-family: 'Sora', sans-serif;
     font-weight: 700;
     font-size: 50px;
-    color: #CEE970;
+    color: #2fffb6;
     border: none;
-    background-color:#70CEE9;
+    background-color: #FFB62F;
     display: inline;
     position: relative;
 }
@@ -36,7 +36,7 @@ body {
     position: absolute;
     left: 10px;
     top: 5px;
-    color: #e970cf;
+    color: #b62fff;
 }
 
 .banner button:hover {
@@ -44,7 +44,7 @@ body {
 }
 
 .banner h2 {
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 1px #0000006c;
 }
 
@@ -60,20 +60,26 @@ form input {
     width: 200px;
     margin-right: 5px;
     border-radius: 20px;
+    padding-left: 15px;
     border: 1px solid rgba(255, 255, 255, 0.63);
+    background-color: rgba(255, 255, 255, 0.619);
 }
 
 input[type='text']::placeholder {
-    padding-left: 10px;
     font-size: 15px;
     vertical-align: middle;
 }
 
 form .search-button {
-    background-color: #70CEE9;
+    background-color: #2FFFB6;
     border: none;
-    border-radius: 50%;
-    font-size: 20px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+form .search-button span {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* would like search "glass" to rotate upon hover*/
@@ -84,23 +90,24 @@ form .search-button {
 
 .search-button:hover {
     cursor: pointer;
+    background-color: #00F39D;
 }
 
 .randomize {
     margin-left: 50%;
     transform:translateX(-50%);
     border: none;
-    background-color: #70CEE9;
+    width: 195px;
+    height: 30px;
+    background-color: #2FFFB6;
     border-radius: 20px;
-    color: white;
+    color: black;
     font-size: 15px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.281);
 }
 
 .randomize:hover {
     cursor: pointer;
-    font-size: 17px;
-    text-shadow: 1px 1px 2px #e970cf;
+    background-color: #00F39D;
 }
 
 ul {
@@ -154,8 +161,8 @@ ul {
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: 15px;
-    width: 350px;
+    padding-bottom: 20px;
+    width: 315px;
 }
 
 .drink-name {
@@ -207,4 +214,58 @@ ul {
 
 .hidden {
     display: none;
+}
+
+@media screen and (min-width: 750px) {
+    .banner {
+        flex-direction: row;
+        margin-bottom: 30px;
+    }
+
+    .home-logo {
+        margin-right: 250px;
+    }
+
+    form input {
+        width: 300px;
+    }
+
+    .search-bar {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .home-logo {
+        margin-right: 400px;
+    }
+
+    form input {
+        width: 400px;
+    }
+
+    .search-bar {
+        margin-bottom: 30px;
+    }
+
+    .details {
+        width: 750px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        width: 750px;
+        background-color: none;
+        border-bottom: none;
+    }
+
+    .cocktail-photo img{
+        width: 375px;
+        border-radius: 15px;
+    }
+
+    .ingredients-container {
+        border-radius: 15px;
+    }
 }
