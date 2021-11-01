@@ -80,7 +80,7 @@ function displayResults(responseJson) {
 
 function getCocktails(search) {
     const url = searchURL + search;
-
+    
     fetch(url)
         .then (response => {
             if (response.ok) {
@@ -96,6 +96,7 @@ function getCocktails(search) {
 
 function getCocktailById(id) {
     const url = searchURL2 + id;
+    console.log(url)
 
     fetch(url)
         .then (response => {
