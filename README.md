@@ -4,6 +4,8 @@ Link to live app: https://acheng-01.github.io/Bevly/
 ## Overview
 Bevly is an app that allows users to search up cocktail recipes using an open API called cocktailDB. Users are able to search by a type of cocktail through the search bar. Alternatively, a random cocktail may be chosen should the user not have one in mind.
 
+![](https://github.com/acheng-01/Bevly/blob/main/Bevly-Sample.gif)
+
 This was my second mini application from the Thinkful Bootcamp, created using HTML, CSS, and Javascript. jQuery is used as the library.
 
 ## Limitations
